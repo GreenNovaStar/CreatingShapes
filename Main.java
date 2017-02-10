@@ -1,8 +1,10 @@
+import java.awt.Rectangle;
 import java.util.Scanner;
-
-
 public class Main{
-
+/*
+import java.awt.Rectangle;
+import java.util.Scanner;
+*/
   //Symbol Method (Start)
   public static char symbolm(int a,char b){
     if(a == 1){
@@ -66,9 +68,13 @@ public class Main{
     System.out.println("Choose a shape to draw.");
     System.out.println("Currently in stock is:");
     System.out.println("Square");
+    System.out.println("Triangle");
+
     String Shape = in.next();
     //Shape=drawShape(Shape);
 
 
   }
 }
+
+//Rectangle asdfa = new Rectangle(symbol)
