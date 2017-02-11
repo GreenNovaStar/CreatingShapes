@@ -57,21 +57,48 @@ import java.util.Scanner;
     int number = in.nextInt();
     char symbol = 'a';
     symbol = symbolm(number,symbol);
-    System.out.println("You have chosen " + symbol);
+    System.out.println("You have chosen the symbol " + symbol);
 
     //Size
-    System.out.println("Enter the size of for the shape.");
-    int size = in.nextInt();
-
+    /*S
+    System.out.println("Enter a length for the shape.");
+    int length = in.nextInt();
+    System.out.println("Enter a width for the shape.");
+    int width = in.nextInt();
+    */
 
     //Shape
     System.out.println("Choose a shape to draw.");
     System.out.println("Currently in stock is:");
-    System.out.println("Square");
-    System.out.println("Triangle");
+    System.out.println("Enter 1 for a Square");
+    //System.out.println("Enter 3 for a Equilateral Triangle");
+    System.out.println("Enter 4 for a Rectangle");
 
-    String Shape = in.next();
-    //Shape=drawShape(Shape);
+    Scanner in2 = new Scanner(System.in);
+    int Shape = in2.nextInt();
+    int size2 = 0;
+
+
+    if(Shape == 1){
+      System.out.println("Enter the length of the sides for the SQUARE.");
+      int length = in.nextInt();
+      Square(length, symbol, size2);
+    }else if(Shape == 2){
+      int length = in.nextInt();
+      rightTriangle(length, symbol);
+    }else if(Shape == 3){
+      System.out.println("Enter the length of the sides for the EQUILATERAL TRIANGLE.");
+      int length = in.nextInt();
+      equilTriangle(length, symbol);
+    }else if(Shape == 4){
+      System.out.println("Enter the length of the RECTANGLE");
+      int length = in.nextInt();
+      System.out.println("Enter the width of the RECTANGLE");
+      int width = in.nextInt();
+      Rectangle(length, width, symbol);
+    }
+
+
 
 
   }
